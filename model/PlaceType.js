@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const PlaceTypeSchema = new mongoose.Schema({
     type: {
@@ -9,4 +9,4 @@ const PlaceTypeSchema = new mongoose.Schema({
 
 const PlaceType = mongoose.model('PlaceType', PlaceTypeSchema);
 
-export default PlaceType;
+module.exports = PlaceType;

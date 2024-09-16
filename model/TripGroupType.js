@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const TripGroupTypeSchema = new mongoose.Schema({
     type: {
@@ -9,4 +9,4 @@ const TripGroupTypeSchema = new mongoose.Schema({
 
 const TripGroupType = mongoose.model('TripGroupType', TripGroupTypeSchema);
 
-export default TripGroupType;
+module.exports = TripGroupType;

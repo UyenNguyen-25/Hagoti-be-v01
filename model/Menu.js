@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const MenuSchema = new mongoose.Schema({
     foodItemId: {
@@ -9,4 +9,4 @@ const MenuSchema = new mongoose.Schema({
 
 const Menu = mongoose.model('Menu', MenuSchema);
 
-export default Menu;
+module.exports = Menu;

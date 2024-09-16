@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const ServicePackageSchema = new mongoose.Schema({
     name: {
@@ -15,4 +15,4 @@ const ServicePackageSchema = new mongoose.Schema({
 
 const ServicePackage = mongoose.model('servicePackage', ServicePackageSchema);
 
-export default ServicePackage;
+module.exports = ServicePackage;
