@@ -14,6 +14,10 @@ const tripGroupTypeRouter = require("./tripGroupType");
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 router.use("/api", authRoutes);
 router.use("/api/place", placeRouter);
 router.use("/api/user", userRouter);
