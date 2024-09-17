@@ -1,59 +1,59 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema(
+  {
     password: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     username: {
-        type: String,
-        required: true,
-        maxlength: 50
+      type: String,
+      required: true,
+      maxlength: 50,
     },
-    phonenumber: {
-        type: String,
-        required: true,
-        maxlength: 11
+    phoneNumber: {
+      type: String,
+      required: true,
+      maxlength: 11,
     },
     avatar: {
-        type: String
+      type: String,
     },
     dob: {
-        type: Date
+      type: Date,
     },
     gender: {
-        type: String
+      type: String,
     },
     fullName: {
-        type: String,
-        required: true,
-        maxlength: 50
+      type: String,
+      required: true,
+      maxlength: 50,
     },
     roleId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Role'
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Role",
     },
     packageId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'servicePackage'
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "servicePackage",
     },
     planId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Plan'
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Plan",
     },
     transactionId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Transaction'
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Transaction",
     },
     favorite: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Place'
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Place",
     },
-    status: {
-        type: String
-    }
-}, { timestamps: true });
+  },
+  { timestamps: true }
+);
 
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
