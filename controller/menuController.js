@@ -9,6 +9,24 @@ const menuController = {
             console.log('Error: ', error);
             return res.status(500).json(error);
         }
+    },
+    createMenu: async (req, res) => {
+        try {
+            const {
+                name,
+                typeId,
+                open,
+                close,
+                rating,
+                address,
+                phoneNumber,
+                menuId,
+                thumbnail
+            } = req.body;
+        } catch (error) {
+            console.log('Error: ', error);
+            return res.status(500).json(error);
+        }
     }
 }
 
