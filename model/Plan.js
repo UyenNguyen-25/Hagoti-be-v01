@@ -17,6 +17,14 @@ const PlanSchema = new mongoose.Schema({
     to: {
         type: Date
     },
+    date: {
+        type: Date
+    },
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true 
+    },
     goWithId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'TripGroupType'
@@ -24,10 +32,15 @@ const PlanSchema = new mongoose.Schema({
     totalHour: {
         type: Number
     },
-    place: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Place'
-    },
+    places: [{
+        placeId: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Place'
+        },
+        order: {
+            type: Number 
+        }
+    }],
     status: {
         type: String
     }

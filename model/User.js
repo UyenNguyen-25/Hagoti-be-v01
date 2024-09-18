@@ -38,10 +38,6 @@ const UserSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "servicePackage",
     },
-    planId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Plan",
-    },
     transactionId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Transaction",

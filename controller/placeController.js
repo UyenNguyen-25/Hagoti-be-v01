@@ -46,6 +46,18 @@ const placeController = {
             console.log('Error: ', error);
             return res.status(500).json(error);
         }
+    },
+    getPlaceById: async (req, res) => {
+        try {
+            const place = await Place.findById(req.params.placeId)
+            if(!place) {
+                res.status(404).json("Place not found.");
+            }
+            return res.status(200).json(place);
+        } catch (error) {
+            console.log('Error: ', error);
+            return res.status(500).json(error);
+        }
     }
 }
 
